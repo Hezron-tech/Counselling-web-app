@@ -15,9 +15,13 @@ class Counselor(models.Model):
     email = models.EmailField(max_length=100)
     phone_number = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
+  
     def __str__(self):
         return self.first_name
+  
+
+
+
 
 
 class Client(models.Model):
@@ -26,9 +30,10 @@ class Client(models.Model):
     email = models.EmailField(max_length=100)
     phone_number = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
+   
     def __str__(self):
         return self.first_name
+
 
 
 class SupportGroup(models.Model):
@@ -71,16 +76,6 @@ class MedicationDosage(models.Model):
 
     def __str__(self):
         return self.patient.first_name + " " + self.medication.name
-
-
-class update_session(models.Model):
-    counselor = models.ForeignKey(Counselor, on_delete=models.CASCADE)
-    session = models.ForeignKey(Session, on_delete=models.CASCADE)
-    start_time = models.DateTimeField()
-    end_time = models.DateTimeField()
-
-    def __str__(self):
-        return self.counselor        
 
 
 

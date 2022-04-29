@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .serializer import CounselorSerializer, ClientSerializer, SupportGroupSerializer, SessionSerializer, MedicationSerializer, MedicationDosageSerializer, update_sessionSerializer
-from .models import Counselor, Client, SupportGroup, Session, Medication, MedicationDosage, update_session
+from .serializer import CounselorSerializer, ClientSerializer, SupportGroupSerializer, SessionSerializer, MedicationSerializer, MedicationDosageSerializer
+from .models import Counselor, Client, SupportGroup, Session, Medication, MedicationDosage
 from rest_framework import status
 
 
@@ -80,7 +80,13 @@ class SupportGroupList(APIView):
         supportgroups = SupportGroup.objects.all()
         serializer = SupportGroupSerializer(supportgroups, many=True)
         return Response(serializer.data)
-
+        
+    def post(self, request):
+        serializer = SupportGroupSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class SupportGroupDetail(APIView):
     def get_object(self, pk):
@@ -113,7 +119,15 @@ class SessionList(APIView):
         sessions = Session.objects.all()
         serializer = SessionSerializer(sessions, many=True)
         return Response(serializer.data)
-
+   
+    def post(self, request):
+        data={}
+        serializer = SessionSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            data['success'] = 'session created successfully'
+            return Response(data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class SessionDetail(APIView):
     def get_object(self, pk):
@@ -174,5 +188,34 @@ class MedicationDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+class MedicationDosageList(APIView):
+    def get(self, request):
+        medicationdosages = MedicationDosage.objects.all()
+        serializer = MedicationDosageSerializer(medicationdosages, many=True)
+        return Response(serializer.data)
 
 
+class MedicationDosageDetail(APIView):
+    def get_object(self, pk):
+        try:
+            return MedicationDosage.objects.get(pk=pk)
+        except MedicationDosage.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+    def get(self, request, pk):
+        medicationdosage = self.get_object(pk)
+        serializer = MedicationDosageSerializer(medicationdosage)
+        return Response(serializer.data)
+            
+    def put(self, request, pk):
+        medicationdosage = self.get_object(pk)
+        serializer = MedicationDosageSerializer(medicationdosage, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk):
+        medicationdosage = self.get_object(pk)
+        medicationdosage.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
