@@ -14,7 +14,7 @@ class CounselorList(APIView):
         counselors = Counselor.objects.all()
         serializer = CounselorSerializer(counselors, many=True)
         return Response(serializer.data)
-
+    
 
 class CounselorDetail(APIView):
     def get_object(self, pk):
@@ -47,7 +47,12 @@ class ClientList(APIView):
         clients = Client.objects.all()
         serializer = ClientSerializer(clients, many=True)
         return Response(serializer.data)
-
+    def post(self, request):
+        serializer = ClientSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class ClientDetail(APIView):
     def get_object(self, pk):
@@ -80,7 +85,7 @@ class SupportGroupList(APIView):
         supportgroups = SupportGroup.objects.all()
         serializer = SupportGroupSerializer(supportgroups, many=True)
         return Response(serializer.data)
-        
+
     def post(self, request):
         serializer = SupportGroupSerializer(data=request.data)
         if serializer.is_valid():
