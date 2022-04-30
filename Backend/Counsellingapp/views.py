@@ -1,15 +1,21 @@
+
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializer import CounselorSerializer, ClientSerializer, SupportGroupSerializer, SessionSerializer, MedicationSerializer, MedicationDosageSerializer
 from .models import Counselor, Client, SupportGroup, Session, Medication, MedicationDosage
 from rest_framework import status
+from rest_framework.generics import GenericAPIView
 
 
 # Create your views here.
 
 
-class CounselorList(APIView):
+class CounselorList(GenericAPIView):
+
+    serializer_class = CounselorSerializer
+
+
     def get(self, request):
         counselors = Counselor.objects.all()
         serializer = CounselorSerializer(counselors, many=True)
@@ -42,7 +48,10 @@ class CounselorDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class ClientList(APIView):
+class ClientList(GenericAPIView):
+
+    serializer_class = ClientSerializer
+
     def get(self, request):
         clients = Client.objects.all()
         serializer = ClientSerializer(clients, many=True)
@@ -54,7 +63,9 @@ class ClientList(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class ClientDetail(APIView):
+class ClientDetail(GenericAPIView):
+
+    serializer_class = ClientSerializer
     def get_object(self, pk):
         try:
             return Client.objects.get(pk=pk)
@@ -80,7 +91,9 @@ class ClientDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class SupportGroupList(APIView):
+class SupportGroupList(GenericAPIView):
+
+    serializer_class = SupportGroupSerializer
     def get(self, request):
         supportgroups = SupportGroup.objects.all()
         serializer = SupportGroupSerializer(supportgroups, many=True)
@@ -93,7 +106,9 @@ class SupportGroupList(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class SupportGroupDetail(APIView):
+class SupportGroupDetail(GenericAPIView):
+
+    serializer_class = SupportGroupSerializer
     def get_object(self, pk):
         try:
             return SupportGroup.objects.get(pk=pk)
@@ -119,7 +134,9 @@ class SupportGroupDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class SessionList(APIView):
+class SessionList(GenericAPIView):
+
+    serializer_class = SessionSerializer
     def get(self, request):
         sessions = Session.objects.all()
         serializer = SessionSerializer(sessions, many=True)
@@ -134,7 +151,9 @@ class SessionList(APIView):
             return Response(data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class SessionDetail(APIView):
+class SessionDetail(GenericAPIView):
+
+    serializer_class = SessionSerializer
     def get_object(self, pk):
         try:
             return Session.objects.get(pk=pk)
@@ -160,14 +179,18 @@ class SessionDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class MedicationList(APIView):
+class MedicationList(GenericAPIView):
+
+    serializer_class = MedicationSerializer
     def get(self, request):
         medications = Medication.objects.all()
         serializer = MedicationSerializer(medications, many=True)
         return Response(serializer.data)
 
 
-class MedicationDetail(APIView):
+class MedicationDetail(GenericAPIView):
+
+    serializer_class = MedicationSerializer
     def get_object(self, pk):
         try:
             return Medication.objects.get(pk=pk)
@@ -193,14 +216,16 @@ class MedicationDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class MedicationDosageList(APIView):
+class MedicationDosageList(GenericAPIView):
+    serializer_class = MedicationDosageSerializer
     def get(self, request):
         medicationdosages = MedicationDosage.objects.all()
         serializer = MedicationDosageSerializer(medicationdosages, many=True)
         return Response(serializer.data)
 
 
-class MedicationDosageDetail(APIView):
+class MedicationDosageDetail(GenericAPIView):
+    serializer_class = MedicationDosageSerializer
     def get_object(self, pk):
         try:
             return MedicationDosage.objects.get(pk=pk)

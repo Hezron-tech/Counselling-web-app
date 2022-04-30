@@ -3,10 +3,35 @@ from django.conf import settings
 from django.conf.urls.static import static
 from . import views
 
+from rest_framework import permissions
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+
+schema_view = get_schema_view(
+   openapi.Info(
+      title="Counselling API",
+      default_version='v1',
+      description="A restful api for counselling",
+      terms_of_service="https://www.google.com/policies/terms/",
+      contact=openapi.Contact(email="josephkamore084@gmail.com"),
+      license=openapi.License(name="MIT"),
+   ),
+   public=True,
+   permission_classes=[permissions.AllowAny],
+)
+
 
 urlpatterns = [
-    path('api/',views.CounselorList.as_view()),#list
-    path('api/<int:pk>/',views.CounselorDetail.as_view()),#detail
+
+    # swagger ui
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0),
+         name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc',
+         cache_timeout=0), name='schema-redoc'),
+    
+    path('api/counselor/',views.CounselorList.as_view()),#list
+    path('api/counselor/<int:pk>/',views.CounselorDetail.as_view()),#detail
     path('api/client/',views.ClientList.as_view()),#list
     path('api/client/<int:pk>/',views.ClientDetail.as_view()),
     path('api/supportgroup/',views.SupportGroupList.as_view()),
