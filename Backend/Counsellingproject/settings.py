@@ -37,6 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Counsellingapp',
+    'rest_auth',
+    'rest_auth.registration',
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # Login via Google as an exemple, you can choose facebook, twitter as you like
+    'allauth.socialaccount.providers.google',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +88,10 @@ WSGI_APPLICATION = 'Counsellingproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'counselling',
+        'USER': 'hezron',
+    'PASSWORD':'hezzy',
     }
 }
 
@@ -112,6 +127,21 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
+SITE_ID = 1
+
+AUTH_USER_MODEL = 'Counsellingapp.USER'
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
 # Static files (CSS, JavaScript, Images)
