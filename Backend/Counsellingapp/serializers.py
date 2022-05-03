@@ -33,7 +33,9 @@ class PatientCustomRegistrationSerializer(RegisterSerializer):
 
 class DoctorCustomRegistrationSerializer(RegisterSerializer):
     doctor = serializers.PrimaryKeyRelatedField(read_only=True,) #by default allow_null = False
-    specialization = serializers.CharField(required=True)
+    specialization = serializers.CharField(required=True)    
+
+    
     
     def get_cleaned_data(self):
             data = super(DoctorCustomRegistrationSerializer, self).get_cleaned_data()
