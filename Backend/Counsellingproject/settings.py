@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Counsellingapp',
+    'Counsellingapp.apps.CounsellingappConfig',
     'rest_auth',
     'rest_auth.registration',
     'rest_framework',
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # Login via Google as an exemple, you can choose facebook, twitter as you like
     'allauth.socialaccount.providers.google',
+
     'drf_yasg',
 ]
 
@@ -89,9 +90,12 @@ WSGI_APPLICATION = 'Counsellingproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'counselling',
-        'USER': 'hezron',
-    'PASSWORD':'hezzy',
+
+        'NAME': 'counsell',
+        'USER': 'moringa',
+    'PASSWORD':'Access',
+
+
     }
 }
 
@@ -120,7 +124,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
