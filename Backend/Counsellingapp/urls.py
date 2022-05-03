@@ -1,3 +1,4 @@
+
 from django.urls import path,register_converter,include
 from django.conf import settings
 from django.conf.urls.static import static
@@ -6,6 +7,12 @@ from . import views
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+
+from django.urls import path
+from .views import PatientRegistrationView, DoctorRegistrationView
+
+app_name = 'Counsellingapp'
+
 
 
 schema_view = get_schema_view(
@@ -42,7 +49,10 @@ urlpatterns = [
     path('api/medication/<int:pk>/',views.MedicationDetail.as_view()),
     path('api/medicationdosage/',views.MedicationDosageList.as_view()),
     path('api/medicationdosage/<int:pk>/',views.MedicationDosageDetail.as_view()),
-
+    #Registration Urls
+    path('registration/patient/', PatientRegistrationView.as_view(), name='register-patient'),
+    path('registration/doctor/', DoctorRegistrationView.as_view(), name='register-doctor'),
+    
   
 ]
 

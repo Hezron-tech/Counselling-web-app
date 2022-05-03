@@ -11,6 +11,7 @@ from rest_framework.generics import GenericAPIView
 # Create your views here.
 
 
+
 class CounselorList(GenericAPIView):
 
     serializer_class = CounselorSerializer
@@ -249,3 +250,17 @@ class MedicationDosageDetail(GenericAPIView):
         medicationdosage = self.get_object(pk)
         medicationdosage.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+from django.shortcuts import render
+from rest_auth.registration.views import RegisterView
+from .serializers import (
+    PatientCustomRegistrationSerializer, DoctorCustomRegistrationSerializer
+    )
+
+class PatientRegistrationView(RegisterView):
+    serializer_class = PatientCustomRegistrationSerializer
+
+
+class DoctorRegistrationView(RegisterView):
+    serializer_class = DoctorCustomRegistrationSerializer
+
