@@ -1,0 +1,79 @@
+.body{
+    background: #EDE6DB;
+}
+.about{
+    color: black;
+   padding: 10rem;
+    font-family: 'Josefin Slab';
+    flex-wrap: wrap;
+
+width: 100%;
+height: 100%;
+padding-top: 1rem;
+justify-content: space-between;
+
+}
+.flex{
+    display: flex;
+    flex-wrap:wrap ;
+    padding-top: 2rem;
+  
+}
+.buttonn{
+    background-color: black;
+    color: white;
+    border: none;
+   
+    border-radius: 25px;
+    width: 10rem;
+    
+    
+    }
+    .cont{
+       
+        margin-left: 3rem;
+        padding-top: 1rem;
+    }
+    .under{
+        text-decoration: underline;
+    }
+    .img2{
+        height: 12rem;
+    }
+    .mental{
+        padding-top: 6.5rem;
+    }
+    
+    .experience{
+        background-color: black;
+        height: 10rem;
+        font-family: 'Josefin Slab';
+    font-style: normal;
+    width: 80%;
+    margin-left: 9rem;
+    }
+    .exp{
+        justify-content: space-evenly;
+        padding-top: 2rem;
+        color: #FFFFFF;
+    }
+    .cooperate{
+     
+        display: flex;
+      
+    color: black;
+    padding: 10rem;
+     font-family: 'Josefin Slab';
+     flex-wrap: wrap;
+ 
+ width: 100%;
+ height: 100%;
+ padding-top:4rem;
+ justify-content: space-between;
+    }
+    .post{
+        height: 15rem;
+    }
+    .coop{
+        margin-top: 3rem;
+    }

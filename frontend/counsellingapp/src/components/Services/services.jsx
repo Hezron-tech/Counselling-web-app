@@ -1,6 +1,11 @@
+
+import image from '../../assets/images/brain.png';
+import family from '../../assets/images/family.png';
+import couples from '../../assets/images/couples.png';
+import hand from '../../assets/images/hand.png';
+import brain from '../../assets/images/brain.png';
+import individual from '../../assets/images/individual.png';
 import React from 'react'
-
-
 import servicesStyles from './services.css'
 
 export default function services() {
@@ -13,12 +18,12 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum a qui <br/>
 perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores <br/>
  dolore iusto tempora, iste officiis. Perferendis excepturi aut libero.</p>
         <div className='serve'>
-           <div>
+           <div className='d-flex'>
                 <div>
-                     
+                     <img className='img-fluid img1' src={image} />
                 </div>
                 
-                <div>
+                <div className='space'>
                     <h3>Psychology Therapy</h3>
                     <p> Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit. <br/> Voluptatum a qui perferendis  <br/> quos hic molestias,</p>
                     
@@ -28,13 +33,13 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
            </div>
 
 
-           <div>
+           <div className='d-flex'>
 
                     <div>
-
+                    <img className='img-fluid img1' src={family} />
                     </div>
 
-                    <div>
+                    <div  className='space'>
                     <h3>Families</h3>
                     <p> Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit. <br/> Voluptatum a qui </p>
                     
@@ -44,12 +49,12 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
 
         </div>
         <div className='serve'>
-                <div>
+                <div className='d-flex'>
                         <div>
-                            
+                        <img className='img-fluid img1' src={individual} />
                         </div>
                         
-                        <div>
+                        <div className='space'>
                             <h3>Individuals</h3>
                             <p> Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit. <br/> Voluptatum a qui perferendis  <br/> quos hic molestias,</p>
                             
@@ -59,13 +64,13 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
                 </div>
 
 
-                <div>
+                <div className='d-flex'>
 
                             <div>
-
+                            <img className='img-fluid img1' src={couples} />
                             </div>
 
-                            <div>
+                            <div className='space'>
                             <h3>Couples</h3>
                             <p> Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit. <br/> Voluptatum a qui </p>
                             
@@ -74,14 +79,14 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
                 </div>
 
         </div>
-        <div className='approach'>
+        <div className='approach d-flex '>
 
-                 <div>
-                
+                 <div className='move'>
+                 <img className='img-fluid img2' src={hand} />
                  </div>
-                 <div>
+                 <div className='move'>
                     <h3>A Holistic Approach</h3>
-                    <h4>The path to mental wellbeing is different 
+                    <h4>The path to mental wellbeing is different <br/>
                          for everyone</h4>
                          <p>We take a personal and considerate  approach to <br/> treating  each patient’s  whole being. Just as great<br/> athletes build up their  physical fitness, we help <br/> those we serve build up mental health<br/>
                            by considering a wide range of factors when<br/> developing a personalised mental healthcare plan.</p>

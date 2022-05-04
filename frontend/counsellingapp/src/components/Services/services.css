@@ -27,6 +27,15 @@ border-radius: 25px;
 
 
 }
+.img1{
+    height: 12rem;
+}
+.img2{
+    height: 12rem;
+}
+.space{
+    padding-top: 3rem;
+}
 .service{
 
     font-family: 'Josefin Slab';
@@ -57,10 +66,18 @@ color: #000000;
     font-weight: 400;
     font-size: 17px;
     line-height: 17px;
-    justify-content: space-evenly;
+     justify-content: space-evenly;
+    flex-wrap: wrap;
     color: #000000;
     padding-bottom: 7rem;
+   
 }
 .decorate{
     text-decoration: underline;
+}
+.move{
+    
+    margin-left: 8rem;
+    margin-top: 2rem;
+  
 }
