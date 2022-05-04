@@ -1,1 +1,1 @@
-web: gunicorn counsellingapp.wsgi --log-file -
+web: gunicorn counsellingproject.wsgi --log-file -
