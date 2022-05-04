@@ -2,6 +2,9 @@ import React from 'react'
 import AboutStyles from './About.css'
 import health from '../../assets/images/health.png';
 import consult from '../../assets/images/consult.jpg';
+import shake from '../../assets/images/shake.png';
+import note from '../../assets/images/note.png';
+import cont from '../../assets/images/cont.png';
 export default function About() {
   return (
     <div className='body'>
@@ -43,10 +46,10 @@ export default function About() {
 
                   </div>
                     <div className='d-flex exp'>
-                        <p>  of experience</p>
-                        <p>Patients</p>
-                        <p>Supervisors</p>
-                        <p>hours spent witth patients</p>
+                        <p className='spa'>  of experience</p>
+                        <p className='sspa'>Patients</p>
+                        <p className='sppa'>Supervisors</p>
+                        <p className='spaa'>hours spent witth patients</p>
                     
 
                      </div>
@@ -63,7 +66,7 @@ export default function About() {
 
                
                     </div>
-                    <div>
+                    <div className='cons'>
 
                     <img className='img-fluid post' src={consult} />
           
@@ -72,26 +75,39 @@ export default function About() {
 
 
            </div>
-           <div>
+
+           <div className='d-flex consult'> 
                <div>
-                 
+               <img className='img-fluid posst' src={cont} />
+               <br/> <br/>
+               <h3>1.Contact Us</h3>
+                 <p>
+                    Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit. <br/>  Perspiciatis autem reprehenderit
+                    <br/>  provident cum officiis
+                    </p>
                </div>
                <div>
-
+               <img className='img-fluid posst' src={note} />
+               <br/> <br/>
+               <h3>2.Consult From The Best</h3>
+               <p>
+                Lorem ipsum dolor sit amet <br/> 
+                consectetur, adipisicing elit.t <br/> 
+                Perspiciatis autem reprehenderit t <br/>
+                provident cum officiis?</p>
                </div>
                <div>
-
+               <img className='img-fluid posst' src={shake} />
+               <br/> <br/>
+               <h3>3.Every Week Consultations</h3>
+               <p>
+                Lorem ipsum dolor sit amet <br/> 
+                consectetur, adipisicing elit.t <br/> 
+                Perspiciatis autem reprehenderit t <br/>
+                provident cum officiis?</p>
                </div>
-
-
-
-
-
-
-
-
-           </div>
-
+          </div>
+           <button className='conbtn'>Contact Us</button>
 
 
 
