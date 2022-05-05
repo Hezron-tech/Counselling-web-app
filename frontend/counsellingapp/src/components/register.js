@@ -18,7 +18,7 @@ function Register()
         age:age
     }
         console.warn(item)
-        let result = await  fetch('http://127.0.0.1:8000/registration/patient/',{
+        let result = await  fetch('https://counselapi.herokuapp.com/registration/patient/',{
             method:'POST',
             body:JSON.stringify(item),
             headers:{

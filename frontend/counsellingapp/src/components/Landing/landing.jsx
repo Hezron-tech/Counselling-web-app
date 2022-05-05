@@ -1,7 +1,10 @@
 import React from 'react'
 import mental from '../../assets/images/mental.jpg';
 import matters from '../../assets/images/matters.jpeg';
+
+
 import phone from '../../assets/images/phone.jpeg';
+
 import landingStyles from './landing.css'
 export default function landing() {
   return (
