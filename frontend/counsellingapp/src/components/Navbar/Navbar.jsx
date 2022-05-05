@@ -17,20 +17,20 @@ export default function Navbar (){
           <div class="menu" id="navbarNav">
               <ul class="navbar-nav">
                   <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="{}">Home</a>
+                      <a class="nav-link active" aria-current="page" href="#landing">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{}">About us</a>
+                      <a class="nav-link" href="#about">About us</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{}">Testimonials</a>
+                      <a class="nav-link" href="#testimonials">Testimonials</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{}">Services</a>
+                      <a class="nav-link" href="#services">Services</a>
                   </li>
 
                   <li class="nav-item">
-                      <a class="nav-link" href="{}">Contacts us</a>
+                      <a class="nav-link" href="#contactus">Contacts us</a>
                   </li>
               </ul>
           </div>
