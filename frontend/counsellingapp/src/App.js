@@ -1,30 +1,38 @@
 
+import React from "react";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import Aboutus from "./components/About/About";
-import Register from "./components/register";
-import Auth from "./components/auth";
-// import Login from "./components/login";
+import Navbar from "./components/Navbar/Navbar";
+import About from './components/About/About';
+import landing from './components/Landing/landing';
 import Services from './components/Services/services';
-import Landing  from "./components/Landing/landing";
+import Sidebar from './components/sidebar';
+import Register from './components/register';
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-    
-     {/* <Register/>
-     <Auth/> */}
-     {/* <Login/> */}
-       {/* <Landing/> */}
-    
-       {/* <Aboutus/> */}
-         {/* <Services /> */}
-
+    <div>
+      <Navbar></Navbar>
+      <Services></Services>
+      <Register></Register>
+      
+      {/* <Router>
+        <Navbar />
+          <Switch>
+            <Route path ={'/landing'} component= {landing}></Route> 
+            <Route path ={'/about'} component= {About}></Route> 
+            <Route path ={'/'} component= {services}></Route> 
+            <Route path ={'/'} component= {Sidebar}></Route>
+          </Switch>
+      </Router> */}
+      
     </div>
   );
 
-  
 }
 
 export default App;
