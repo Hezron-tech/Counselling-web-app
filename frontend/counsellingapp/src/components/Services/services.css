@@ -1,0 +1,83 @@
+.body{
+    background: #EDE6DB;
+}
+.head{
+    color: black;
+    text-align: center;
+    font-family: 'Josefin Slab';
+font-style: normal;
+font-weight: 600;
+font-size: 33px;
+line-height: 37px;
+padding-top: 2rem;
+}
+ul{
+    justify-content: space-evenly;
+    display: flex;
+}
+li{
+    list-style: none;
+}
+button{
+background-color: black;
+color: white;
+border: none;
+padding: 10px;
+border-radius: 25px;
+
+
+}
+.img1{
+    height: 12rem;
+}
+.img2{
+    height: 12rem;
+}
+.space{
+    padding-top: 3rem;
+}
+.service{
+
+    font-family: 'Josefin Slab';
+    font-style: normal;
+    font-weight: 80%;
+    font-size: 24px;
+    line-height: 24px;
+text-align: center;
+padding-top: 2rem;
+}
+.serve{
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Josefin Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 17px;
+
+color: #000000;
+
+}
+.approach{
+    padding-top: 4rem;
+    font-family: 'Josefin Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 17px;
+     justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: #000000;
+    padding-bottom: 7rem;
+   
+}
+.decorate{
+    text-decoration: underline;
+}
+.move{
+    
+    margin-left: 8rem;
+    margin-top: 2rem;
+  
+}

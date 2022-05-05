@@ -1,5 +1,4 @@
 asgiref==3.5.0
-backports.zoneinfo==0.2.1
 certifi==2021.10.8
 cffi==1.15.0
 charset-normalizer==2.0.12
@@ -8,7 +7,8 @@ coreschema==0.0.4
 cryptography==37.0.0
 defusedxml==0.7.1
 dj-database-url==0.5.0
-Django==4.0.4
+Django==3.2.7
+django-heroku==0.3.1
 django-allauth==0.50.0
 django-heroku==0.3.1
 django-rest-auth==0.9.5
@@ -30,7 +30,7 @@ pycparser==2.21
 PyJWT==2.3.0
 pyparsing==3.0.8
 python-dateutil==1.5
-python-decouple==3.6
+python-decouple==3.5
 python3-openid==3.2.0
 pytz==2022.1
 requests==2.27.1
