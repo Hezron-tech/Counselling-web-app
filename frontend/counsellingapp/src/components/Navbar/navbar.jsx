@@ -7,8 +7,11 @@ export default function navbar() {
         <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img className='logoo' src={brain} alt="" class="d-inline-block align-text-top"/>
-      Bootstrap
+       <div className="logo" >
+          <img className="logoo" height={120} src={brain} alt="" />
+        </div>
+        
+     
     </a>
   </div>
 </nav>

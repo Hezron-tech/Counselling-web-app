@@ -2,6 +2,12 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings
 
+from django.http import request
+
+
+
+
+
 class User(AbstractUser):
   #Boolean fields to select the type of account.
   is_doctor = models.BooleanField(default=False)
