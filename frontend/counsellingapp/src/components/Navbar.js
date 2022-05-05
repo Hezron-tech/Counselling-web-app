@@ -7,7 +7,7 @@ export default function Navbar (){
   const links = [
     {
       name: "Home",
-      path:"/home"
+      path:"/"
     },
     {
       name: "About Us",
