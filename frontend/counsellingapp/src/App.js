@@ -2,9 +2,11 @@
 
 import Navbar from "./components/Navbar";
 import Aboutus from "./components/About/About";
-import Register from "./components/register";
+// import Register from "./components/register";
 import Services from './components/Services/services';
 import Landing  from "./components/Landing/landing";
+
+
 
 function App() {
   return (
@@ -12,10 +14,12 @@ function App() {
       {/* <Navbar /> */}
     
      {/* <Register/> */}
-       <Landing/>
+        <Landing/>
     
-       <Aboutus/>
-         <Services />
+        <Aboutus/>
+        <Services />
+
+      <Navbar />
 
     </div>
   );

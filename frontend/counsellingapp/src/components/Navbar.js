@@ -7,7 +7,7 @@ export default function Navbar (){
   const links = [
     {
       name: "Home",
-      path:"/"
+      path:"/home"
     },
     {
       name: "About Us",
@@ -27,7 +27,7 @@ export default function Navbar (){
     }
   ]
   return(
-   <>
+  <>
       <div className = "navbar container">
         <div className="navlinks">
           { links.map(link =>(
@@ -46,7 +46,7 @@ export default function Navbar (){
         </div>
       </div>
       {showSidebar && <Sidebar links={links}/>}
-   </>
+  </>
 
   )
 
