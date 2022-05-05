@@ -11,7 +11,7 @@ import Landing  from "./components/Landing/landing";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
     
      {/* <Register/>
      <Auth/> */}
