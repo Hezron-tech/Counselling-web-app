@@ -1,5 +1,7 @@
 .body{
     background: #EDE6DB;
+    font-family: 'Josefin Slab';
+    font-style: normal;
 }
 .landing
 {
@@ -8,7 +10,8 @@
     font-family: 'Josefin Slab';
 font-style: normal;
 justify-content: space-evenly;
-padding-top: 2rem;
+padding-top: 4rem;
+
 
 }
 .img22{
