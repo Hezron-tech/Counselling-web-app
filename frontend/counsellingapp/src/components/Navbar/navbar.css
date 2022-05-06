@@ -1,35 +1,15 @@
-.ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.navbar {
-    margin-top: 20px;
-    display: flex;
-    align-items: right;
-    justify-content: space-evenly;
-    padding: 20px;
-    background-color: #E5E5E5;
-    color: #fff;
-}
+
+
 .menu .nav-item{
     padding: 10px 34px;
 }
-.ctn {
-    border-radius: 15px;
-    /* height: 100%;
-    width: 100%; */
-    font-size: 30px;
-    width: 200px;
-    
-}
-.nav-button{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 12px;
-}
+
+
+
+
 *{
     font-family:'Times New Roman', Times, serif;
     font-size: 500;
     font-weight: 500;
+    background-color:#EDE6DB; ;
 }

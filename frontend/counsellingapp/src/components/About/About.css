@@ -44,14 +44,14 @@ justify-content: space-between;
         padding-top: 6.5rem;
     }
     
-    .experience{
-        background-color: black;
-        height: auto;
-        font-family: 'Josefin Slab';
-    font-style: normal;
-    width: 80%;
-    margin-left: 9rem;
-    }
+.experience{
+background-color: black;
+height: auto;
+font-family: 'Josefin Slab';
+font-style: normal;
+width: 80%;
+margin-left: 9rem;
+}
     .exp{
         justify-content: space-evenly;
         padding-top: 2rem;

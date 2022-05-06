@@ -24,7 +24,7 @@ export default function Navbar (){
                       <NavLink class="nav-link active" aria-current="page" to="/">Home</NavLink>
                   </li>
                   <li class="nav-item">
-                      <NavLink class="nav-link" to="/about">About us</NavLink>
+                      <NavLink class="nav-link" to="/about">About</NavLink>
                   </li>
                   <li class="nav-item">
                       <NavLink class="nav-link" to="/testimonials">Testimonials</NavLink>
@@ -34,13 +34,13 @@ export default function Navbar (){
                   </li>
 
                   <li class="nav-item">
-                      <NavLink class="nav-link" to="/contactus">Contacts us</NavLink>
+                      <NavLink class="nav-link" to="/contactus">Contacts</NavLink>
                   </li>
               </ul>
           </div>
-          <div class="d-flex align-items-center">
-            <li class="nav-button">
-              <button class="ctn" onClick={register_redirect} type="button">Get started</button>
+          <div  class="d-flex align-items-center">
+            <li height={1} class="nav-button">
+              <button   class="btn  btn-dark me-2" onClick={register_redirect} type="button">Get started</button>
             </li>
           </div>
       </div>
