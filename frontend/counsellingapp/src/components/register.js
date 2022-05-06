@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+// import {useNavigate} from 'react-router-dom'
 function Register()
 {   const[username,setUsername]=useState("")
     const[password1,setPassword1]=useState("")
@@ -7,6 +8,8 @@ function Register()
     const[address,setAddress]=useState("")
     const[area,setArea]=useState("")
     const[age,setAge]=useState("")
+    // const history = useNavigate();
+
     async function signUp()
     {   let item = {
         username:username,
@@ -27,7 +30,8 @@ function Register()
             }
         })
         result = await result.json()
-        console.warn('result',result)
+        localStorage.setItem('user-info',JSON.stringify(result))
+        // history.push('/login')
 
     }
     return(

@@ -1,9 +1,7 @@
 
-
-
-
-
-
+nav{
+    background: #EDE6DB
+}
 .ul {
     list-style-type: none;
     margin: 0;
@@ -39,5 +37,5 @@
     font-family:'Times New Roman', Times, serif;
     font-size: 500;
     font-weight: 500;
+    background: #EDE6DB;
 }
-

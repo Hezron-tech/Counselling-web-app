@@ -36,7 +36,7 @@ export default function Navbar (){
           </div>
           <div class="d-flex align-items-center">
             <li class="nav-button">
-              <button className='me-22' class="btn btn-lg btn-dark me-2" type="button">Get started</button>
+              <button class="btn btn-lg btn-dark me-2" type="button">Get started</button>
             </li>
           </div>
       </div>
