@@ -1,13 +1,17 @@
 import React from 'react'
 import logoy from '../../assets/images/logoy.png';
-
+import {NavLink} from 'react-router-dom';
 import navbarStyles from './navbar.css'
 
 
 
 export default function Navbar (){
+  let register_redirect = () => {
+    window.location.href = "/register";
+  }
   return(
   <>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
             <img className='img-fluid logo' src={logoy} alt="" width="100" height="80" padding-left='0%'></img>
@@ -17,26 +21,26 @@ export default function Navbar (){
           <div class="menu" id="navbarNav">
               <ul class="navbar-nav">
                   <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#landing">Home</a>
+                      <NavLink class="nav-link active" aria-current="page" to="/">Home</NavLink>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#about">About us</a>
+                      <NavLink class="nav-link" to="/about">About us</NavLink>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#testimonials">Testimonials</a>
+                      <NavLink class="nav-link" to="/testimonials">Testimonials</NavLink>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#services">Services</a>
+                      <NavLink class="nav-link" to="/services">Services</NavLink>
                   </li>
 
                   <li class="nav-item">
-                      <a class="nav-link" href="#contactus">Contacts us</a>
+                      <NavLink class="nav-link" to="/contactus">Contacts us</NavLink>
                   </li>
               </ul>
           </div>
           <div class="d-flex align-items-center">
             <li class="nav-button">
-              <button class="btn btn-lg btn-dark me-2" type="button">Get started</button>
+              <button class="ctn" onClick={register_redirect} type="button">Get started</button>
             </li>
           </div>
       </div>

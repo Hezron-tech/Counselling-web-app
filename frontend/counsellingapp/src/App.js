@@ -1,36 +1,37 @@
 
 import React from "react";
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-
+import {BrowserRouter as Router ,Routes, Route } from 'react-router-dom';
+  
 import Navbar from "./components/Navbar/Navbar";
 import About from './components/About/About';
-import landing from './components/Landing/landing';
+import Login from './components/login';
+import Register from "./components/register";
 import Services from './components/Services/services';
-import Sidebar from './components/sidebar';
-import Register from './components/register';
-
-
+import Landing  from "./components/Landing/landing";
+import ErrorPage from "./components/ErrorPage";
 
 
 
 function App() {
   return (
-    <div>
-      <Navbar></Navbar>
-      <Services></Services>
-      <Register></Register>
-      
-      {/* <Router>
-        <Navbar />
-          <Switch>
-            <Route path ={'/landing'} component= {landing}></Route> 
-            <Route path ={'/about'} component= {About}></Route> 
-            <Route path ={'/'} component= {services}></Route> 
-            <Route path ={'/'} component= {Sidebar}></Route>
-          </Switch>
-      </Router> */}
-      
-    </div>
+        <>
+        <Router>
+          
+             <Navbar/>
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="about" element={<About />} />
+              <Route path="services" element={<Services />} />
+              <Route path="register" element={<Register />} />
+              <Route path="login" element={<Login />} />
+              <Route path="*" element={<ErrorPage/>} />
+            </Routes>
+
+        </Router>
+        
+    
+        </>
+  
   );
 
 }

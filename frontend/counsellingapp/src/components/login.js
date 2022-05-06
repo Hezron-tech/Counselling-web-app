@@ -5,6 +5,7 @@ import Loginn from  './login'
 function Login(){
 
 
+    
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     // const history = useNavigate();
@@ -27,7 +28,7 @@ function Login(){
             body:JSON.stringify(item)
         });
         result = await result.json();
-        localStorage.setItem( "user-info",JSON.stringify(result))
+        // localStorage.setItem( "user-info",JSON.stringify(result))
         // history.push("/home")
     }
     return(
