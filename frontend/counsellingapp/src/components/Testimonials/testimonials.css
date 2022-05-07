@@ -1,0 +1,33 @@
+.tes{
+    background: #EDE6DB;
+}
+.tests{
+    text-align: center;
+    padding-top: 2rem;
+}
+.testimony{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.img111{
+    height: 12rem;
+    width: 17rem;
+    margin-top: 10rem;
+    border-radius: 25px;
+
+}
+.img11111{
+    height: 12rem;
+    width: 17rem;
+    margin-top: 11.5rem;
+    border-radius: 25px;
+}
+.img1111{
+    height: 26rem;
+    width: 30rem;
+    border-radius: 25px;
+}
+.good{
+    padding-top: 1rem;
+}

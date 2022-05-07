@@ -9,7 +9,11 @@ import React from 'react'
 import servicesStyles from './services.css'
 
 export default function services() {
+  let register_redirect = () => {
+    window.location.href = "/home";
+  }
   return (
+
     <div className='body' >
     
         <h2 className='head'>Our <br/> Services</h2>
@@ -17,6 +21,8 @@ export default function services() {
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum a qui <br/> 
 perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores <br/>
  dolore iusto tempora, iste officiis. Perferendis excepturi aut libero.</p>
+
+ 
         <div className='serve'>
            <div className='d-flex'>
                 <div>
@@ -48,6 +54,7 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
            </div>
 
         </div>
+       
         <div className='serve'>
                 <div className='d-flex'>
                         <div>
@@ -78,6 +85,9 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
                     
                 </div>
 
+        </div>
+        <div className='counse'>
+        <button onClick={register_redirect} >Our counselors</button>
         </div>
         <div className='approach d-flex '>
 

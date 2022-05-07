@@ -10,6 +10,9 @@ import Register from "./components/register";
 import Services from './components/Services/services';
 import Landing  from "./components/Landing/landing";
 import ErrorPage from "./components/ErrorPage";
+import Testimonials from './components/Testimonials/testimonials';
+import Contactus from "./components/contactus/contactus";
+import Home from './components/home'
 
 
 
@@ -25,6 +28,9 @@ function App() {
               <Route path="services" element={<Services />} />
               <Route path="register" element={<Register />} />
               <Route path="login" element={<Login />} />
+              <Route path="home" element={<Home />} />
+              <Route path="contactus" element={< Contactus />} />
+              <Route path="testimonials" element={<Testimonials />} />
               <Route path="*" element={<ErrorPage/>} />
             </Routes>
 
