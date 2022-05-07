@@ -5,6 +5,7 @@ import {BrowserRouter as Router ,Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
 import About from './components/About/About';
 import Login from './components/login';
+// import Login from '.src/Login';
 import Register from "./components/register";
 import Services from './components/Services/services';
 import Landing  from "./components/Landing/landing";
@@ -28,6 +29,7 @@ function App() {
             </Routes>
 
         </Router>
+        <Login />
         
     
         </>

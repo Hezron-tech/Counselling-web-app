@@ -1,51 +1,107 @@
-import React, { useState,useEffect } from 'react'
-// import { useNavigate } from 'react-router-dom';
-import Loginn from  './login'
+import { useRef, useState, useEffect, useContext } from 'react';
+import AuthContext from "../context/AuthProvider";
 
-function Login(){
+import axios from '../api/axios';
+const LOGIN_URL = '/auth';
 
+const Login = () => {
+    const { setAuth } = useContext(AuthContext);
+    const userRef = useRef();
+    const errRef = useRef();
 
-    
-    const [email,setEmail]=useState("");
-    const [password,setPassword]=useState("");
-    // const history = useNavigate();
-    // useEffect(() =>{
-    //     if (localStorage.getItem('user-info')){
-    //         history.push("/home")
-    //     }
-    // },
-    // [])
+    const [user, setUser] = useState('');
+    const [pwd, setPwd] = useState('');
+    const [errMsg, setErrMsg] = useState('');
+    const [success, setSuccess] = useState(false);
 
-    async function Login(){
-        console.warn(email,password);
-        let item= {email,password};
-        let result=await fetch('http://127.0.0.1:8000/rest-auth/login/', {
-            method:'POST',
-            headers:{
-                "Content-Type":"application/json",
-                "Accept":"application/json"
-            },
-            body:JSON.stringify(item)
-        });
-        result = await result.json();
-        // localStorage.setItem( "user-info",JSON.stringify(result))
-        // history.push("/home")
+    useEffect(() => {
+        userRef.current.focus();
+    }, [])
+
+    useEffect(() => {
+        setErrMsg('');
+    }, [user, pwd])
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await axios.post(LOGIN_URL,
+                JSON.stringify({ user, pwd }),
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
+                }
+            );
+            console.log(JSON.stringify(response?.data));
+            //console.log(JSON.stringify(response));
+            const accessToken = response?.data?.accessToken;
+            const roles = response?.data?.roles;
+            setAuth({ user, pwd, roles, accessToken });
+            setUser('');
+            setPwd('');
+            setSuccess(true);
+        } catch (err) {
+            if (!err?.response) {
+                setErrMsg('No Server Response');
+            } else if (err.response?.status === 400) {
+                setErrMsg('Missing Username or Password');
+            } else if (err.response?.status === 401) {
+                setErrMsg('Unauthorized');
+            } else {
+                setErrMsg('Login Failed');
+            }
+            errRef.current.focus();
+        }
     }
-    return(
-        <div>
-            <Loginn/>
-        <h1>Login Here</h1>
-        <div className='col-sm-6 offset-sm-3'>
-            <input type="text" placeholder='email' onChange={(e)=>setEmail(e.target.value)} className='form-control'/> <br/>
-            <input type="password" placeholder='password' onChange={(e)=>setPassword(e.target.value)} className='form-control'/> <br/>
 
-            <button onClick={Login} className='btn btn-primary'>Login </button>
+    return (
+        <>
+            {success ? (
+                <section>
+                    <h1>You are logged in!</h1>
+                    <br />
+                    <p>
+                        <a href="/home">Go to Home</a>
+                    </p>
+                </section>
+            ) : (
+                <section>
+                    <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+                    <h1>Sign In</h1>
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="username">Username:</label>
+                        <input
+                            type="text"
+                            id="username"
+                            ref={userRef}
+                            autoComplete="off"
+                            onChange={(e) => setUser(e.target.value)}
+                            value={user}
+                            required
+                        /> <br/>
 
-        </div>
-
-        </div>
-        
-
+                        <label htmlFor="password">Password:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            onChange={(e) => setPwd(e.target.value)}
+                            value={pwd}
+                            required
+                        /> <br/>
+                        <button>Sign In</button>
+                    </form>
+                    <p>
+                        Need an Account?<br />
+                        <span className="line">
+                            {/*put router link here*/}
+                            <a href="/register">Sign Up</a>
+                        </span>
+                    </p>
+                </section>
+            )}
+        </>
     )
 }
-export default Login;
+
+export default Login
