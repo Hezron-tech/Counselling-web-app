@@ -12,7 +12,7 @@ export default function Navbar (){
   return(
   <>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light ">
       <div class="container-fluid">
             <img className='img-fluid logo' src={logoy} alt="" width="100" height="80" padding-left='0%'></img>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
