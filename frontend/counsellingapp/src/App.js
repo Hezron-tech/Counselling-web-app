@@ -12,7 +12,8 @@ import Landing  from "./components/Landing/landing";
 import ErrorPage from "./components/ErrorPage";
 import Testimonials from './components/Testimonials/testimonials';
 import Contactus from "./components/contactus/contactus";
-import Home from './components/home'
+import Home from './components/home';
+import Medication from './components/medication';
 import Auth from './components/auth';
 
 
@@ -30,6 +31,7 @@ function App() {
               <Route path="auth" element={<Auth />} />
               <Route path="login" element={<Login />} />
               <Route path="home" element={<Home />} />
+              <Route path="medication" element={<Medication />} />
               <Route path="contactus" element={< Contactus />} />
               <Route path="testimonials" element={<Testimonials />} />
               <Route path="*" element={<ErrorPage/>} />
