@@ -1,6 +1,11 @@
 import React,{useState} from "react";
+import '../styles/register.css';
 function Auth()
-{   const[username,setUsername]=useState("")
+{  
+    let register_redirect = () => {
+        window.location.href = "/register";
+      }
+     const[username,setUsername]=useState("")
     const[password1,setPassword1]=useState("")
     const[password2,setPassword2]=useState("")
     const[email,setEmail]=useState("")
@@ -30,8 +35,18 @@ function Auth()
 
     }
     return(
-        <div className="col-sm-6 offset-sm-3">
-            <h1>Register</h1>
+
+        <div className="doc">
+  <div className="col-sm-6 offset-sm-3">
+            <div className="d-flex opt">
+                <h4>Register as:</h4>
+                 <form className="fav">
+                      <label>patient</label>
+                      <input type="radio"onClick={register_redirect} name="fav_language" value="HTML"/><br/>
+                     
+                </form>
+             </div>
+             <h3>Doctor SignUp</h3>
             <input type='text' value={username} onChange={(e)=>setUsername(e.target.value)} className="form-control" placeholder="username" />
             <br/>
             <input type='email' value={email} onChange={(e)=>setEmail(e.target.value)} className="form-control" placeholder="email" />
@@ -48,6 +63,8 @@ function Auth()
             <button onClick={signUp} className="btn btn-primary">Sign Up</button>
 
         </div>
+        </div>
+      
   )
 }
 export default Auth;

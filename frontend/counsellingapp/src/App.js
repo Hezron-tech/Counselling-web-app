@@ -13,7 +13,7 @@ import ErrorPage from "./components/ErrorPage";
 import Testimonials from './components/Testimonials/testimonials';
 import Contactus from "./components/contactus/contactus";
 import Home from './components/home'
-
+import Auth from './components/auth';
 
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
               <Route path="about" element={<About />} />
               <Route path="services" element={<Services />} />
               <Route path="register" element={<Register />} />
+              <Route path="auth" element={<Auth />} />
               <Route path="login" element={<Login />} />
               <Route path="home" element={<Home />} />
               <Route path="contactus" element={< Contactus />} />
@@ -35,7 +36,7 @@ function App() {
             </Routes>
 
         </Router>
-        <Login />
+     
         
     
         </>

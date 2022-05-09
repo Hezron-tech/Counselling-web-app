@@ -5,6 +5,7 @@
     text-align: center;
     justify-content: space-evenly;
     padding-top: 2rem;
+    background-color: #EDE6DB;
 }
 tr{
    border: solid rgb(110, 104, 104);
