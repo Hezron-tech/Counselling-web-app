@@ -12,15 +12,12 @@ import AuthContext from "../../context/AuthProvider";
 
 
 export default function Navbar (){
-  let register_redirect = () => {
-    window.location.href = "/register";
-  }
+ 
   const { setAuth } = useContext(AuthContext);
   const navigate = useNavigate();
   const { auth } = useAuth();
   const logout = async () => {
-      // if used in more components, this should be in context 
-      // axios to /logout endpoint 
+     
       setAuth({});
       navigate('/login');
   }
@@ -53,7 +50,7 @@ export default function Navbar (){
                   </li>
               </ul>
           </div>
-          { auth?.token?
+          { auth?.user?
           <div className="d-flex align-items-center">
             <li className="nav-button">
               <button className="btn btn-dark me-2" onClick={logout} type="button">Logout</button>
@@ -74,22 +71,4 @@ export default function Navbar (){
   )
 }
 
-//               <div class="dropdown">
-//               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-//               User name
-//               </button>
-//               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-//                 <li><a onClick={logout} class="dropdown-item" href="#">Logout</a></li>
-              
-//               </ul>
-//             </div>
-
-//          }
-    
-//     </nav>
-        
-//   </>
-
-//   )
-
-// }
+ 
