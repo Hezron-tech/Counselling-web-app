@@ -12,6 +12,9 @@ export default function services() {
   let register_redirect = () => {
     window.location.href = "/home";
   }
+  let med_redirect = () => {
+    window.location.href = "/medication";
+  }
   return (
 
     <div className='body' >
@@ -88,6 +91,7 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
         </div>
         <div className='counse'>
         <button onClick={register_redirect} >Our counselors</button>
+        <button onClick={med_redirect} >Available Medicines</button>
         </div>
         <div className='approach d-flex '>
 

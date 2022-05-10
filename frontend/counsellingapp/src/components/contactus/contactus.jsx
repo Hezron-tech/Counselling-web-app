@@ -1,24 +1,39 @@
 import React from 'react'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import contactusStyles from './contactus.css'
 
-const contactus = () => {
-    return (
-        <div className='contt'>
-            <div id='contact'>
-                <div className='container'>
-                    <div className='col-md-8'>
-                        <div className='row'>
-                            <div className='contact-tile'>
-                                <h3>Reach out to our team</h3>
-                                <p>
-                                    For additional inquiries kindly fill in the form and we will reach back out to you as soon as possible. 
-                                </p>
-                            </div>
-                            <form name='newMessage' validate >
-                                <div className='row'>
-                                    <div className='col-md-6'>
-                                        <div className='form-group'>
+export default function contactus (){
+    return(
+        <div className='newe'>
+            <div className='container'>
+                <div className='contact-header'>
+                    <h1>Reach us here for more inquiries</h1>
+                </div>
+            </div>
+            <div className='containerfluid'>
+                <div className='row'>
+                        <div class="col-3 ">
+                            <h2>Contact Us</h2>
+
+                            <i class="bi bi-telephone-fill">    Phone</i>
+                            <h4>+25470616283</h4>
+
+                            <i class="bi bi-envelope-open-fill">    Email</i>
+                            <h4>info@counsellingapp.com</h4>
+
+                            <i class="bi bi-geo-alt">    Address</i> 
+                            <h4>Westpark Towers, 3rd Floor</h4>
+                            <h4>Westlands, Nairobi</h4>
+                        </div>
+
+
+                        <div class="col-sm-5  ">
+                        <h2>Send A Message</h2>
+                            <div className='form-group'>
+                                <form name='sendNewMessage'>
+                                    <div className='row'>
+                                        <div className='col-6'>
                                             <input 
                                                 type='text' 
                                                 id= 'name' 
@@ -29,9 +44,7 @@ const contactus = () => {
                                             // onChange={handleChange}
                                             ></input>
                                         </div>
-                                    </div>
-                                    <div className='col-md-6'>
-                                        <div className='form-group'>
+                                        <div className='col-6'>
                                             <input 
                                                 type='email' 
                                                 id= 'email' 
@@ -43,7 +56,7 @@ const contactus = () => {
                                             ></input>
                                         </div>
                                     </div>
-                                    <div className='col-md-6'>
+                                    <div className='feedback'>
                                         <div className='form-group'>
                                             <textarea 
                                                 type='message' 
@@ -56,16 +69,12 @@ const contactus = () => {
                                             ></textarea>
                                         </div>
                                     </div>
-                                </div>
-                                <div id='success'></div>
-                                <input type="submit" value="send message" class="submit"></input>
-                            </form>
+                                    <button type="submit" class="btn btn-custom  btn-sm">Send Message</button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
     )
 }
-
-export default contactus

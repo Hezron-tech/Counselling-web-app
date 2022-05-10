@@ -1,13 +1,25 @@
 import React from 'react'
+import {Nav,NavDropdown} from 'react-bootstrap'
 import logoy from '../../assets/images/logoy.png';
 import {NavLink} from 'react-router-dom';
 import navbarStyles from './navbar.css'
+import useAuth from '../../hooks/useAuth'
+  
+import { useNavigate, Link } from "react-router-dom";
+import { useContext } from "react";
+import AuthContext from "../../context/AuthProvider";
 
 
 
 export default function Navbar (){
-  let register_redirect = () => {
-    window.location.href = "/register";
+ 
+  const { setAuth } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const { auth } = useAuth();
+  const logout = async () => {
+     
+      setAuth({});
+      navigate('/login');
   }
   return(
   <>
@@ -38,16 +50,25 @@ export default function Navbar (){
                   </li>
               </ul>
           </div>
-          <div  class="d-flex align-items-center">
-            <li height={1} class="nav-button">
-              <button   class="btn  btn-dark me-2" onClick={register_redirect} type="button">Get started</button>
+          { auth?.user?
+          <div className="d-flex align-items-center">
+            <li className="nav-button">
+              <button className="btn btn-dark me-2" onClick={logout} type="button">Logout</button>
             </li>
           </div>
+          :
+         
+          <div  class="d-flex align-items-center">
+          <li height={1} class="nav-button">
+            <button   class="btn  btn-dark me-2" onClick={() => navigate('/login')} type="button">Get started</button>
+          </li>
+        </div>
+        }
       </div>
-    </nav>
-
+        
+      </nav>
   </>
-
   )
-
 }
+
+ 

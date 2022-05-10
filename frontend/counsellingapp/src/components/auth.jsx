@@ -1,11 +1,18 @@
 import React,{useState} from "react";
+import { useNavigate } from 'react-router-dom';
+import '../styles/register.css';
 function Auth()
-{   const[username,setUsername]=useState("")
+{  
+    let register_redirect = () => {
+        window.location.href = "/register";
+      }
+    const[username,setUsername]=useState("")
     const[password1,setPassword1]=useState("")
     const[password2,setPassword2]=useState("")
     const[email,setEmail]=useState("")
     const[specialization,setSpecialization]=useState("")
-    
+    const navigate = useNavigate();
+
     
     async function signUp()
     {   let item = {
@@ -17,7 +24,7 @@ function Auth()
        
     }
         console.warn(item)
-        let result = await  fetch('http://127.0.0.1:8000/registration/doctor/',{
+        let result = await  fetch('https://counselapi.herokuapp.com/registration/doctor/',{
             method:'POST',
             body:JSON.stringify(item),
             headers:{
@@ -26,12 +33,23 @@ function Auth()
             }
         })
         result = await result.json()
-        console.warn('result',result)
+        localStorage.setItem('user-info',JSON.stringify(result))
+        navigate('/login');
 
     }
     return(
-        <div className="col-sm-6 offset-sm-3">
-            <h1>Register</h1>
+
+        <div className="doc">
+  <div className="col-sm-6 offset-sm-3">
+            <div className="d-flex opt">
+                <h4>Register as:</h4>
+                 <form className="fav">
+                      <label>patient</label>
+                      <input type="radio"onClick={register_redirect} name="fav_language" value="HTML"/><br/>
+                     
+                </form>
+             </div>
+             <h3>Doctor SignUp</h3>
             <input type='text' value={username} onChange={(e)=>setUsername(e.target.value)} className="form-control" placeholder="username" />
             <br/>
             <input type='email' value={email} onChange={(e)=>setEmail(e.target.value)} className="form-control" placeholder="email" />
@@ -46,8 +64,17 @@ function Auth()
             <br/>
             
             <button onClick={signUp} className="btn btn-primary">Sign Up</button>
-
+                  <p>
+                        Have an Account?<br />
+                        <span className="line">
+                            {/*put router link here*/}
+                            <a href="/login">Sign In</a>
+                        </span>
+                    </p>
         </div>
+               
+        </div>
+      
   )
 }
 export default Auth;

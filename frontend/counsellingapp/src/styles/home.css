@@ -1,11 +1,16 @@
 .tabs{
 
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-evenly;
     padding-top: 2rem;
     background-color: #EDE6DB;
+<<<<<<< HEAD
+=======
+    padding-left: 5rem;
+    padding-inline-end: 5rem;
+>>>>>>> 552833dd89754cf300f9bc752f7a7b9021570fc7
 }
 tr{
    border: solid rgb(110, 104, 104);
