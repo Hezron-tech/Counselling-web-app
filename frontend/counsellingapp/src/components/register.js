@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-// import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 function Register()
 {      let register_redirect = () => {
     window.location.href = "/auth";
@@ -12,7 +12,7 @@ function Register()
     const[address,setAddress]=useState("")
     const[area,setArea]=useState("")
     const[age,setAge]=useState("")
-    // const history = useNavigate();
+    const navigate = useNavigate();
 
     async function signUp()
     {   let item = {
@@ -35,7 +35,7 @@ function Register()
         })
         result = await result.json()
         localStorage.setItem('user-info',JSON.stringify(result))
-        // history.push('/login')
+        navigate('/login');
 
     }
     return(
