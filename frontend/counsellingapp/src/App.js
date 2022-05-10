@@ -45,11 +45,7 @@ function App() {
             </Routes>
 
         </Router>
-<<<<<<< HEAD
-        {/* <Login /> */}
-=======
      
->>>>>>> 552833dd89754cf300f9bc752f7a7b9021570fc7
         
     
         </>
