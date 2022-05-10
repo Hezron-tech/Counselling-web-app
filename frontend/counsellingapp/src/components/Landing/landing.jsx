@@ -18,11 +18,16 @@ export default function landing() {
                         health care, right here in Kenya</h1>
 
                         <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing <br/>
-                        elit. Dolorum sit neque omnis aliquam repellat<br/>
-                        aliquid provident impedit non? Quisquam iusto<br/>
-                        assumenda delectus et nostrum iure consequatur<br/>
-                            voluptas fugit veritatis aliquid!</p>
+                        Counselling web app is an independent mental health information.  <br/>
+                        Our Experts are online now and  waiting to offer psychology therapy<br/>
+                        and a varierty of services.<br/>
+                        Sign up and book our sessions online for high quality mental health care!!.<br/>
+                          </p>
+
+
+                            
+
+
                 </div>
                 <div>
                 <img className='img-fluid img22' src={mental} />
@@ -33,6 +38,7 @@ export default function landing() {
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
+
             <p>More</p></div>
           
            <button className='covid'>covid-19-update</button>
@@ -41,20 +47,24 @@ export default function landing() {
         <div className='text-center self'>
          <h1>Whole Self-Care</h1>
          <h3>MentalHealth takes a unique approach to well being</h3>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis repudiandae harum fugiat illo <br/>
-          voluptas molestiae unde dolor iure sit et incidunt commodi quod  idolore. </p>
+         <p>For many people, self-care is an afterthought, but we believe that self-care is the foundation upon which all healthy habits are built.<br/>
+         Let us show you how good taking care of you can feel. </p>
+          
         </div>
 
       <div className='d-flex lorem'>
                 <div className='end'>
                    <h1>Empathy</h1>
                    <p>
-                    Lorem ipsum dolor sit amet consectet<br/>
-                    ur, adipisicing elit. Perspiciatis autem    <br/>   
-                      reprehenderit provident cum officiis? <br/>
-                    Minus placeat tenetur unde rerum sit<br/>
-                    nemo, nisi voluptatibus facere beatae <br/>
-                    magni! Aliquid inventore unde odit.</p>
+                   Having a great deal of empathy makes you concerned<br/>
+                   for the well-being and happiness of others <br/>   
+                   It also means, however,<br/>
+                   that you can sometimes get overwhelmed, burned out,<br/>
+                   or even overstimulated from always thinking<br/>
+                   about other people's emotions.</p>
+
+                       
+
                 </div>
                 <div>
                 <img className='img-fluid img21' src={phone} />
@@ -62,9 +72,9 @@ export default function landing() {
                 <div>
                 <h1>Innovation</h1>
                    <p>
-                    Lorem ipsum dolor sit amet consectetur, <br/>
-                    adipisicing elit. Perspiciatis autem<br/>
-                    reprehenderit provident cum officiis?<br/> Minus placeat tenet.</p>
+                    We are a social enterprise leveraging <br/>
+                    industry-leading tools and human-centered design<br/>
+                    to provide exceptional services in the  area of<br/> data management,capacity,building,emerging technologies,advisory and research</p>
                 </div>
 
       </div>
@@ -73,12 +83,12 @@ export default function landing() {
                 <div className='end'>
                    <h1>Prevention</h1>
                    <p>
-                    Lorem ipsum dolor sit amet consectet<br/>
-                    ur, adipisicing elit. Perspiciatis autem    <br/>   
-                      reprehenderit provident cum officiis? <br/>
-                    Minus placeat tenetur unde rerum sit<br/>
-                    nemo, nisi voluptatibus facere beatae <br/>
-                    magni! Aliquid inventore unde odit.</p>
+                    COVID-19 social Economic impact asssesment<br/>
+                    in the comunities,<br/>   
+                      Strengthening Goverment Covid-19 response<br/>
+                    and implementation of anti-discrimination policies by <br/>
+                    by goverment <br/>
+                  </p>
                 </div>
                 <div>
                 <img className='img-fluid img21' src={matters} />
@@ -86,9 +96,13 @@ export default function landing() {
                 <div>
                 <h1>Personaliztion</h1>
                    <p>
-                    Lorem ipsum dolor sit amet consectetur, <br/>
-                    adipisicing elit. Perspiciatis autem<br/>
-                    reprehenderit provident cum officiis?<br/> Minus placeat tenet.</p>
+                   The doctor of the future will give no medicine, <br/>
+                   but will interest her or his patients in the care of the human frame, <br/>
+                   in a proper diet, and in the cause and prevention of mental disorder<br/></p>
+
+
+
+                    
                 </div>
 
       </div>
