@@ -29,19 +29,20 @@ function App() {
 
               <Route element={<RequireAuth/>}>  
                   <Route path="services" element={<Services />} />
-                  <Route path="/" element={<Landing />} />
+                 
                    <Route path="about" element={<About />} />
                    <Route path="contactus" element={< Contactus />} />
                    <Route path="testimonials" element={<Testimonials />} />
-                   <Route path="home" element={<Home />} />
-                   <Route path="medication" element={<Medication />} />
+                 
              
                </Route>
-           
+                    <Route path="/" element={<Landing />} />
                     <Route path="register" element={<Register />} />
                     <Route path="auth" element={<Auth />} />
                     <Route path="login" element={<Login />} />        
                     <Route path="*" element={<ErrorPage/>} />
+                    <Route path="home" element={<Home />} />
+                   <Route path="medication" element={<Medication />} />
             </Routes>
 
         </Router>
