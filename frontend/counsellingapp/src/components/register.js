@@ -67,8 +67,15 @@ function Register()
             <br/>
             
             <button onClick={signUp} className="btn btn-primary">Sign Up</button>
-
+                   <p>
+                        Have an Account?<br />
+                        <span className="line">
+                            {/*put router link here*/}
+                            <a href="/login">Sign In</a>
+                        </span>
+                    </p>
         </div>
+                 
         </div>
         
   )

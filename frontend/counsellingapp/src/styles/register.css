@@ -20,3 +20,6 @@
 .fav{
     padding-top: .2rem;
 }
+setErrMsg{
+    color: red;
+}
