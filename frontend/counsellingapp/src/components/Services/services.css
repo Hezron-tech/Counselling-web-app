@@ -55,6 +55,18 @@ font-style: normal;
 font-weight: 400;
 font-size: 17px;
 line-height: 17px;
+color: #000000;
+
+}
+.servee{
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Josefin Slab';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 17px;
 
 color: #000000;
 

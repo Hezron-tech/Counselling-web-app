@@ -20,3 +20,9 @@ nav{
     font-weight: 500;
     background-color:#EDE6DB; ;
 }
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}

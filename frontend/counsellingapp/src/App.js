@@ -6,7 +6,7 @@ import {BrowserRouter as Router ,Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar/Navbar";
 import About from './components/About/About';
 import Login from './components/login';
-
+import Layout from './components/Layout';
 import Loginn from './components/loginn';
 import Register from "./components/register";
 import Services from './components/Services/services';
@@ -18,6 +18,7 @@ import Home from './components/home';
 import Medication from './components/medication';
 import Auth from './components/auth';
 import RequireAuth  from "./components/RequireAuth";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -26,10 +27,12 @@ function App() {
           
              <Navbar/>
             <Routes>
+            <Route path="/" element={<Layout />}>
 
               <Route element={<RequireAuth/>}>  
-                  <Route path="services" element={<Services />} />
-                 
+                   <Route path="services" element={<Services />} />
+                   <Route path="home" element={<Home />} />
+                   <Route path="medication" element={<Medication />} />
                    <Route path="about" element={<About />} />
                    <Route path="contactus" element={< Contactus />} />
                    <Route path="testimonials" element={<Testimonials />} />
@@ -41,10 +44,13 @@ function App() {
                     <Route path="auth" element={<Auth />} />
                     <Route path="login" element={<Login />} />        
                     <Route path="*" element={<ErrorPage/>} />
-                    <Route path="home" element={<Home />} />
-                   <Route path="medication" element={<Medication />} />
+              
+            </Route>
+             
+         
+          
             </Routes>
-
+          
         </Router>
      
         
