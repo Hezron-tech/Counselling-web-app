@@ -69,7 +69,8 @@ export default function contactus (){
                                             ></textarea>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-custom  btn-sm">Send Message</button>
+                                    <br/>
+                                    <button type="submit" class="btn btn-primary  btn-sm">Send Message</button>
                                 </form>
                             </div>
                         </div>
