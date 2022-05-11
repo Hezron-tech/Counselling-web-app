@@ -11,37 +11,45 @@ function testimonials() {
       <div className='testimony'>
             <div>
                 <h2>Amazing experience</h2>
-                <p>Lorem ipsum dolor sit amet consectetur <br/>
-                    adipisicing elit. Numquam, deserunt<br/>
-                   aliquid odit nemo commodi vero ipsam<br/>
-                   quia porro sit error tenetur voluptate<br/>
-                    qui ipsa expedita sed repellat hic<br/>
-                     eos ratione?</p>
+                <p>I’ve already recommended their website<br/>  to 3 more friends <br/>
+                and I’m honestly going to tell as many people <br/>
+                as possible about it I’m so grateful for this<br/>  service.<br/>
+                   <br/>
+                   I love my therapist!</p>
                      <hr/>
+
+                       
+
                 <img className='img-fluid img111' src={brown} />
                 <h2>Improvement</h2>
+
+                <p>Wonderful. Such a big help to my mental health.</p>
 
             </div>
             <div>
                 
                 <img  className='img-fluid img1111' src={modern} />
                 <h3 className='good'>I have gotten better</h3>
-                <p>Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Numquam, dese<br/>
-                   aliquid odit nemo commodi vero ipsam
-                   quia porro sit error tenetur vo<br/>
-                    qui ipsa expedita sed repellat hic
-                     eos ratione?</p>
+                <p> Would highly recommend, very knowledgeable and <br/>
+                has a great balance of listening and offering advice
+                  </p>
+
+
+                    
             </div>
             <div>
                
                 <h3>Many Guides</h3>
-                <p>Lorem ipsum dolor sit amet consectetur <br/>
-                    adipisicing elit. Numquam, deserunt<br/>
-                   aliquid odit nemo commodi vero ipsam<br/>
-                   quia porro sit error tenetur voluptate<br/>
-                    qui ipsa expedita sed repellat hic<br/>
-                     eos ratione?</p>
+                <p>I’ve seen so many therapists <br/> in the past, but none have ever had <br/>  such an immediate grasp <br/>
+                at my past traumas and current<br/>  struggles from that.<br/>
+                I’m already so encouraged by my growth  <br/> and comforted by her understanding<br/>  and directions.<br/>
+                I can’t recommend her enough, I’m just <br/>  so thankful I finally found someone<br/>
+                who can work with me through<br/>  the deeper things<br/>
+                that affect my every day mental health.?</p>
+
+
+
+                          
                 <img  className='img-fluid img11111' src={mane} />
             </div>
 

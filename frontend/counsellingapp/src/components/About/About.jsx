@@ -12,13 +12,20 @@ export default function About() {
          <div className='mental'>
                     <h2>About MentalHealth</h2>
                     <p>
-                Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit.  <br/> 
-                Perspiciatis autem reprehenderit  <br/> 
-                provident cum officiis? Minus placeat  <br/> 
-                tenetur unde rerum sit nemo, nisi <br/> 
-                voluptatibus facere beatae magni! <br/> 
-                Aliquid inventore unde odit.
+                    Mental health is an important indicator<br/> of overall wellbeing. Individuals struggling  <br/> 
+                    with mental health challenges are likely  <br/> 
+                    to have some this affect how they live their general life.  <br/> 
+                    Acquiring treatment is vital in addressing  <br/> 
+                    this challenge and restoring daily life.  <br/> 
+               
                 </p>
+
+
+
+
+
+
+
                 <div className='flex'>
                     <button className='buttonn'>Services</button>
                     <h3 className='cont'><span className='under'>Contact</span> Us</h3>
@@ -82,8 +89,8 @@ export default function About() {
                <br/> <br/>
                <h3>1.Contact Us</h3>
                  <p>
-                    Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit. <br/>  Perspiciatis autem reprehenderit
-                    <br/>  provident cum officiis
+                    Reach out to our team <br/> for questions regarding your health. <br/>  Always here to support
+                    <br/>  our clients with all their needs
                     </p>
                </div>
                <div>
@@ -91,20 +98,20 @@ export default function About() {
                <br/> <br/>
                <h3>2.Consult From The Best</h3>
                <p>
-                Lorem ipsum dolor sit amet <br/> 
-                consectetur, adipisicing elit.t <br/> 
-                Perspiciatis autem reprehenderit t <br/>
-                provident cum officiis?</p>
+                With over 10 years experience, <br/> 
+                our counsellors are experts in <br/> 
+                addressing diverse needs <br/>
+                for our clients</p>
                </div>
                <div>
                <img className='img-fluid posst' src={shake} />
                <br/> <br/>
                <h3>3.Every Week Consultations</h3>
                <p>
-                Lorem ipsum dolor sit amet <br/> 
-                consectetur, adipisicing elit.t <br/> 
-                Perspiciatis autem reprehenderit t <br/>
-                provident cum officiis?</p>
+                Our clients have consultations <br/> 
+                every week and can reach out <br/> 
+                for emergency consultations  <br/>
+                required.</p>
                </div>
           </div>
            <button className='conbtn'>Contact Us</button>
