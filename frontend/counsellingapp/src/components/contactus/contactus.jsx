@@ -12,8 +12,8 @@ export default function contactus (){
                 </div>
             </div>
             <div className='containerfluid'>
-                <div className='row'>
-                        <div class="col-3 ">
+                <div className='row roww '>
+                        <div class="col-3 rowww">
                             <h2>Contact Us</h2>
 
                             <i class="bi bi-telephone-fill">    Phone</i>
@@ -28,7 +28,7 @@ export default function contactus (){
                         </div>
 
 
-                        <div class="col-sm-5  ">
+                        <div class="col-sm-5  smm ">
                         <h2>Send A Message</h2>
                             <div className='form-group'>
                                 <form name='sendNewMessage'>

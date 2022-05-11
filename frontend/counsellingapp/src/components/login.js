@@ -11,7 +11,7 @@ const Login = () => {
     const errRef = useRef();
     const navigate = useNavigate();
     const [user, setUser] = useState('');
-    const [email, setEmail] = useState('');
+  
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
     const [pwd, setPwd] = useState('');
@@ -24,35 +24,34 @@ const Login = () => {
 
     useEffect(() => {
         setErrMsg('');
-    }, [user,email, pwd])
+    }, [user, pwd])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
             const response = await axios.post(LOGIN_URL,
-                JSON.stringify({ username:user, email:email, password:pwd }),
+                JSON.stringify({ username:user, password:pwd }),
                 {
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true
                 }
             );
-            console.log(JSON.stringify(response?.data));
-           
-          
-           
+            console.log(JSON.stringify(response?.data));  
+            localStorage.setItem('user-info', JSON.stringify(response?.data));         
             const accessToken = response?.data?.accessToken;
             const roles = response?.data?.roles;
-            setAuth({ user, email,pwd, roles, accessToken });
+         
+            setAuth({ user,pwd, roles, accessToken });
             setUser('');
-            setEmail('');
+         
             setPwd('');
             navigate(from, { replace: true });
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response' );
             } else if (err.response?.status === 400) {
-                setErrMsg('Invalid Username,email or Password' );
+                setErrMsg('Invalid Username or Password' );
             } else if (err.response?.status === 401) {
                 setErrMsg('Unauthorized' );
             } else {
@@ -83,17 +82,7 @@ const Login = () => {
                             value={user}
                             required
                         /> <br/>
-                          <label htmlFor="Email">Email:</label>
-                        <input
-                        className="form-control"
-                            type="email"
-                            id="Email"
-                            ref={userRef}
-                            autoComplete="off"
-                            onChange={(e) => setEmail(e.target.value)}
-                            value={email}
-                            required
-                        /> <br/>
+                         
 
                         <label htmlFor="password">Password:</label>
                         <input

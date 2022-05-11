@@ -18,6 +18,7 @@ import Home from './components/home';
 import Medication from './components/medication';
 import Auth from './components/auth';
 import RequireAuth  from "./components/RequireAuth";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -46,9 +47,10 @@ function App() {
               
             </Route>
              
-                    
+         
+          
             </Routes>
-
+          
         </Router>
      
         

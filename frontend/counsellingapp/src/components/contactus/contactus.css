@@ -45,6 +45,7 @@ body{
     font-family: 'Josefin Slab';
     font-size: larger;
     color: black;
+   
 }
 
 
@@ -59,4 +60,16 @@ body{
     border-radius: 25px;
     transition: all 0.5s linear;
     border: 0;
+}
+.roww{
+    justify-content: space-evenly;
+  
+}
+.rowww{
+ 
+    background-color: black;
+    color: rgb(179, 166, 166);
+    min-height: 24rem;
+    min-width: 23rem;
+    width: 100vh;
 }
