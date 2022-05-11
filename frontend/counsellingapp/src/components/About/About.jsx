@@ -12,13 +12,20 @@ export default function About() {
          <div className='mental'>
                     <h2>About MentalHealth</h2>
                     <p>
-                Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit.  <br/> 
-                Perspiciatis autem reprehenderit  <br/> 
-                provident cum officiis? Minus placeat  <br/> 
-                tenetur unde rerum sit nemo, nisi <br/> 
-                voluptatibus facere beatae magni! <br/> 
-                Aliquid inventore unde odit.
+                    Mental health is an important indicator<br/> of overall wellbeing. Individuals struggling  <br/> 
+                    with mental health challenges are likely  <br/> 
+                    to have some this affect how they live their general life.  <br/> 
+                    Acquiring treatment is vital in addressing  <br/> 
+                    this challenge and restoring daily life.  <br/> 
+               
                 </p>
+
+
+
+
+
+
+
                 <div className='flex'>
                     <button className='buttonn'>Services</button>
                     <h3 className='cont'><span className='under'>Contact</span> Us</h3>

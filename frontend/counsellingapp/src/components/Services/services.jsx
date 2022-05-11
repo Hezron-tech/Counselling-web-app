@@ -21,9 +21,9 @@ export default function services() {
     
         <h2 className='head'>Our <br/> Services</h2>
         <p className='service'>
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum a qui <br/> 
-perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores <br/>
- dolore iusto tempora, iste officiis. Perferendis excepturi aut libero.</p>
+        At your appointment, you'll be encouraged to talk about your feelings and emotions <br/>
+        with a trained therapist, who'll listen and support you without judging or criticising.<br/>
+        The therapist can help you gain a better understanding of your feelings and thought processes, and find your own solutions to problems</p>
 
  
         <div className='serve'>
@@ -34,7 +34,7 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
                 
                 <div className='space'>
                     <h3>Psychology Therapy</h3>
-                    <p> Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit. <br/> Voluptatum a qui perferendis  <br/> quos hic molestias,</p>
+                    <p> We help people with a broad variety of mental illnesses<br/>and emotional difficulties.<br/> we help eliminate or control troubling symptoms so a person can function better <br/>and can increase well-being and healing.</p>
                     
                 </div>
 
@@ -50,7 +50,7 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
 
                     <div  className='space'>
                     <h3>Families</h3>
-                    <p> Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit. <br/> Voluptatum a qui </p>
+                    <p>We can help family members improve communication and resolve conflicts <br/> our therapy is often short term <br/> your specific treatment plan will depend on your family's situation.</p>
                     
                     </div>
                
@@ -66,7 +66,7 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
                         
                         <div className='space'>
                             <h3>Individuals</h3>
-                            <p> Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit. <br/> Voluptatum a qui perferendis  <br/> quos hic molestias,</p>
+                            <p> Our goal is  to inspire change and improve quality of life <br/> We help people overcome obstacles to their well-being <br/> we increase positive feelings, such as compassion and self-esteem <br/> People in our therapy session learn skills for handling difficult situations, making healthy decisions, and reaching goals.</p>
                             
                         </div>
 
@@ -82,7 +82,7 @@ perferendis quos hic molestias, corrupti numquam dolor ratione mollitia, maiores
 
                             <div className='space'>
                             <h3>Couples</h3>
-                            <p> Lorem ipsum dolor sit amet <br/> consectetur, adipisicing elit. <br/> Voluptatum a qui </p>
+                            <p>We address a wide range of relationship issues<br/> including recurring conflicts <br/>feelings of disconnection, an affair, issues related to sex, or difficulties due to external stressors</p>
                             
                             </div>
                     
