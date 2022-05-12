@@ -32,7 +32,7 @@ function App() {
 
               <Route element={<RequireAuth/>}>  
               <Route path="services" element={<Services />} />
-                 
+              <Route path="appointment" element={<Appointment/>} />
               <Route path="contactus" element={< Contactus />} />
                </Route>
                   
@@ -46,7 +46,7 @@ function App() {
                     <Route path="auth" element={<Auth />} />
                     <Route path="login" element={<Login />} />        
                     <Route path="*" element={<ErrorPage/>} />
-                    <Route path="appointment" element={<Appointment/>} />
+                    
               
             </Route>
              
