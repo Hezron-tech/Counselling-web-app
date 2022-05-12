@@ -68,7 +68,8 @@ export default function contactus (){
                                             // onChange={handleChange}
                                             ></textarea>
                                         </div>
-                                    </div> <br/>
+                                    </div>
+                                    <br/>
                                     <button type="submit" class="btn btn-primary  btn-sm">Send Message</button>
                                 </form>
                             </div>

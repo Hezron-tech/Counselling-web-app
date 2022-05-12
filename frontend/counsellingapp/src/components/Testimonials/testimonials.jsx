@@ -11,9 +11,9 @@ function testimonials() {
       <div className='testimony'>
             <div>
                 <h2>Amazing experience</h2>
-                <p>I’ve already recommended their website to 3 more friends <br/>
+                <p>I’ve already recommended their website<br/>  to 3 more friends <br/>
                 and I’m honestly going to tell as many people <br/>
-                as possible about it I’m so grateful for this service.<br/>
+                as possible about it I’m so grateful for this<br/>  service.<br/>
                    <br/>
                    I love my therapist!</p>
                      <hr/>
@@ -40,11 +40,11 @@ function testimonials() {
             <div>
                
                 <h3>Many Guides</h3>
-                <p>I’ve seen so many therapists <br/> in the past, but none have ever had such an immediate grasp <br/>
-                at my past traumas and current struggles from that.<br/>
-                I’m already so encouraged by my growth  <br/> and comforted by her understanding and directions.<br/>
-                I can’t recommend her enough, I’m just so thankful I finally found someone<br/>
-                who can work with me through the deeper things<br/>
+                <p>I’ve seen so many therapists <br/> in the past, but none have ever had <br/>  such an immediate grasp <br/>
+                at my past traumas and current<br/>  struggles from that.<br/>
+                I’m already so encouraged by my growth  <br/> and comforted by her understanding<br/>  and directions.<br/>
+                I can’t recommend her enough, I’m just <br/>  so thankful I finally found someone<br/>
+                who can work with me through<br/>  the deeper things<br/>
                 that affect my every day mental health.?</p>
 
 

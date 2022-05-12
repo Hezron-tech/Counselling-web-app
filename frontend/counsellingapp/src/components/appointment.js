@@ -7,36 +7,40 @@ function Appointment() {
   const[email,setemail]=useState("")
   const[phone,setphone]=useState("")
   const[request,setrequest]=useState("")
+
   
-  const navigate = useNavigate();
 
-  async function appointment()
-  {   let item = {
-      first_name:first_name,
-      last_name:last_name,
-      email:email,
-      phone:phone,
-      request:request,
-  }
-      console.warn(item)
-      let result = await  fetch('https://agile-wildwood-05543.herokuapp.com/api/make-an-appointment/',{
-          method:'POST',
-          body:JSON.stringify(item),
-          headers:{
-              'Content-Type':'application/json',
-              'Accept':'application/json'
-          }
-      })
-      result = await result.json()
-      localStorage.setItem('user-info',JSON.stringify(result))
-      navigate('/appointment');
+  const handlesubmit=(e)=>{
+    e.preventDefault()
+    let item = {
+        first_name:first_name,
+        last_name:last_name,
+        email:email,
+        phone:phone,
+        request:request,
+    }
+    console.warn(item)  
+    fetch('https://agile-wildwood-05543.herokuapp.com/api/make-an-appointment/',{
+        method:'POST',
+        body:JSON.stringify(item),
+        headers:{
+            'Content-Type':'application/json',
+            'Accept':'application/json'
+        }
+    }).then(() =>{
+        alert("Appointment made successfully")
+    }
 
+    )
+  
   }
+
+
   return (                       
 <div class="col-sm-5  smm ">
   <h2>Book Appointment</h2>
       <div className='form-group'>
-          <form name='sendNewMessage'>
+          <form onSubmit={handlesubmit} name='sendNewMessage'>
               <div className='row'>
                   <div className='col-6'>
                       <input 
@@ -96,7 +100,7 @@ function Appointment() {
                       <textarea
                           value={request}
                           onChange={(e)=>setrequest(e.target.value)} 
-                          type='text' 
+                          type='request' 
                           id= 'request' 
                           className='form-control' 
                           placeholder='Request' 
@@ -106,7 +110,7 @@ function Appointment() {
                       ></textarea>
                   </div>
               </div> <br/>
-              <button onClick={appointment} type="submit" class="btn btn-primary  btn-sm">Book Appointment</button>
+              <button  type="submit" class="btn btn-primary  btn-sm">Book Appointment</button>
           </form>
       </div>
   </div>

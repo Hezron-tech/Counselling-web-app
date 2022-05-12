@@ -31,15 +31,16 @@ function App() {
             <Route path="/" element={<Layout />}>
 
               <Route element={<RequireAuth/>}>  
-                   <Route path="services" element={<Services />} />
-                   <Route path="home" element={<Home />} />
-                   <Route path="medication" element={<Medication />} />
-                   <Route path="about" element={<About />} />
-                   <Route path="contactus" element={< Contactus />} />
-                   <Route path="testimonials" element={<Testimonials />} />
+              <Route path="services" element={<Services />} />
                  
-             
+              <Route path="contactus" element={< Contactus />} />
                </Route>
+                  
+                    <Route path="home" element={<Home />} />
+                    <Route path="medication" element={<Medication />} />
+                    <Route path="about" element={<About />} />
+                   
+                    <Route path="testimonials" element={<Testimonials />} />
                     <Route path="/" element={<Landing />} />
                     <Route path="register" element={<Register />} />
                     <Route path="auth" element={<Auth />} />
