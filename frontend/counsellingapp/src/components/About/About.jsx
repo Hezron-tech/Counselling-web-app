@@ -6,6 +6,12 @@ import shake from '../../assets/images/shake.png';
 import note from '../../assets/images/note.png';
 import cont from '../../assets/images/cont.png';
 export default function About() {
+  let services_redirect = () => {
+    window.location.href = "/services";
+  }
+  let contact_redirect = () => {
+    window.location.href = "/contactus";
+  }
   return (
     <div className='body'>
        <div className='about d-flex'>
@@ -27,8 +33,8 @@ export default function About() {
 
 
                 <div className='flex'>
-                    <button className='buttonn'>Services</button>
-                    <h3 className='cont'><span className='under'>Contact</span> Us</h3>
+                    <button onClick={services_redirect} className='buttonn'>Services</button>
+                    <h3 className='cont'><span onClick={contact_redirect} className='under'>Contact</span> Us</h3>
                 </div>
             </div>
             <div>
@@ -114,7 +120,7 @@ export default function About() {
                 required.</p>
                </div>
           </div>
-           <button className='conbtn'>Contact Us</button>
+           <button onClick={contact_redirect} className='conbtn'>Contact Us</button>
 
 
 

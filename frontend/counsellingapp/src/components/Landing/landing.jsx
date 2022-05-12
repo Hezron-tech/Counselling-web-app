@@ -7,6 +7,11 @@ import phone from '../../assets/images/phone.jpeg';
 
 import landingStyles from './landing.css'
 export default function landing() {
+  let register_redirect = () => {
+    window.location.href = "https://www.worldometers.info/coronavirus/";
+  }
+
+  
   return (
     <div className='body container-fluid'>
 
@@ -41,7 +46,7 @@ export default function landing() {
 
             <p>More</p></div>
           
-           <button className='covid'>covid-19-update</button>
+           <button onClick={ register_redirect} className='covid'>covid-19-update</button>
         </div>
          
         <div className='text-center self'>
@@ -74,7 +79,7 @@ export default function landing() {
                    <p>
                     We are a social enterprise leveraging <br/>
                     industry-leading tools and human-centered design<br/>
-                    to provide exceptional services in the  area of<br/> data management,capacity,building,emerging technologies,advisory and research</p>
+                    to provide exceptional services in the  area of<br/> data management,capacity,building,emerging technologies,advisory and<br/>  research</p>
                 </div>
 
       </div>
@@ -97,8 +102,8 @@ export default function landing() {
                 <h1>Personaliztion</h1>
                    <p>
                    The doctor of the future will give no medicine, <br/>
-                   but will interest her or his patients in the care of the human frame, <br/>
-                   in a proper diet, and in the cause and prevention of mental disorder<br/></p>
+                   but will interest her or his patients in the care of the human frame,
+                   in  <br/>a proper diet, and in the cause and prevention of mental disorder<br/></p>
 
 
 
@@ -107,13 +112,6 @@ export default function landing() {
 
       </div>
        
-
-
-
-
-
-
-
     </div>
   )
 }
