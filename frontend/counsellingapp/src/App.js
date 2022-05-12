@@ -19,6 +19,7 @@ import Medication from './components/medication';
 import Auth from './components/auth';
 import RequireAuth  from "./components/RequireAuth";
 import Footer from "./components/footer";
+import Appointment from "./components/appointment";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
                     <Route path="auth" element={<Auth />} />
                     <Route path="login" element={<Login />} />        
                     <Route path="*" element={<ErrorPage/>} />
+                    <Route path="appointment" element={<Appointment/>} />
               
             </Route>
              

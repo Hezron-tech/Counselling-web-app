@@ -21,6 +21,7 @@ export default function Navbar (){
       setAuth({});
       navigate('/login');
   }
+  let appointment= ()=>{ window.location.href='/appointment'}
   return(
   <>
 
@@ -48,7 +49,14 @@ export default function Navbar (){
                   <li class="nav-item">
                       <NavLink class="nav-link" to="/contactus">Contacts</NavLink>
                   </li>
+                  <div  class="d-flex align-items-center">
+                    <li height={1} class="nav-button">
+                      <button   class="btn  btn-dark me-2" onClick={() => navigate('/appointment')} type="button">Book Appointment</button>
+                       </li>
+                       </div>
+                  
               </ul>
+
           </div>
           { auth?.user?
           <div className="d-flex align-items-center">
