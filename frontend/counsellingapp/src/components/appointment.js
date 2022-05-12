@@ -19,7 +19,7 @@ function Appointment() {
       request:request,
   }
       console.warn(item)
-      let result = await  fetch('https://agile-wildwood-05543.herokuapp.com/make-an-appointment/',{
+      let result = await  fetch('https://agile-wildwood-05543.herokuapp.com/api/make-an-appointment/',{
           method:'POST',
           body:JSON.stringify(item),
           headers:{
