@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "./static/css/main.54ac8dea.css",
-    "main.js": "./static/js/main.42cd12c2.js",
-    "static/media/mane.jpg": "./static/media/mane.db7f0e2ce52927edccfd.jpg",
-    "static/media/health.png": "./static/media/health.71a70a7093760132f669.png",
-    "static/media/brown.jpg": "./static/media/brown.bffda96328c6dbdb2799.jpg",
-    "static/media/brain.png": "./static/media/brain.4c2b7ca27f98230610da.png",
-    "static/media/hand.png": "./static/media/hand.870b608774c0c340fe43.png",
-    "static/media/mental.jpg": "./static/media/mental.fd6dcdfeaec94f2146c7.jpg",
-    "static/media/logoy.png": "./static/media/logoy.73012f1fed30b160bfb3.png",
-    "static/media/consult.jpg": "./static/media/consult.219c4a0b80a591f8db78.jpg",
-    "static/media/matters.jpeg": "./static/media/matters.789222b7be14544b3e33.jpeg",
-    "static/media/couples.png": "./static/media/couples.a396309b347d2363c862.png",
-    "static/media/lend.jpeg": "./static/media/lend.59f5b60f6fc0ec7cfef4.jpeg",
-    "static/media/phone.jpeg": "./static/media/phone.4ac2b0dd2ae8ab1d0ba5.jpeg",
-    "static/media/family.png": "./static/media/family.d9844d5ef1685280bc27.png",
-    "static/media/individual.png": "./static/media/individual.34e0855442c462a19e23.png",
-    "static/media/shake.png": "./static/media/shake.45d3fe7b60c8b40c7452.png",
-    "index.html": "./index.html",
-    "main.54ac8dea.css.map": "./static/css/main.54ac8dea.css.map",
-    "main.42cd12c2.js.map": "./static/js/main.42cd12c2.js.map"
+    "main.css": "/static/css/main.54ac8dea.css",
+    "main.js": "/static/js/main.9fd4f758.js",
+    "static/media/mane.jpg": "/static/media/mane.db7f0e2ce52927edccfd.jpg",
+    "static/media/health.png": "/static/media/health.71a70a7093760132f669.png",
+    "static/media/brown.jpg": "/static/media/brown.bffda96328c6dbdb2799.jpg",
+    "static/media/brain.png": "/static/media/brain.4c2b7ca27f98230610da.png",
+    "static/media/hand.png": "/static/media/hand.870b608774c0c340fe43.png",
+    "static/media/mental.jpg": "/static/media/mental.fd6dcdfeaec94f2146c7.jpg",
+    "static/media/logoy.png": "/static/media/logoy.73012f1fed30b160bfb3.png",
+    "static/media/consult.jpg": "/static/media/consult.219c4a0b80a591f8db78.jpg",
+    "static/media/matters.jpeg": "/static/media/matters.789222b7be14544b3e33.jpeg",
+    "static/media/couples.png": "/static/media/couples.a396309b347d2363c862.png",
+    "static/media/lend.jpeg": "/static/media/lend.59f5b60f6fc0ec7cfef4.jpeg",
+    "static/media/phone.jpeg": "/static/media/phone.4ac2b0dd2ae8ab1d0ba5.jpeg",
+    "static/media/family.png": "/static/media/family.d9844d5ef1685280bc27.png",
+    "static/media/individual.png": "/static/media/individual.34e0855442c462a19e23.png",
+    "static/media/shake.png": "/static/media/shake.45d3fe7b60c8b40c7452.png",
+    "index.html": "/index.html",
+    "main.54ac8dea.css.map": "/static/css/main.54ac8dea.css.map",
+    "main.9fd4f758.js.map": "/static/js/main.9fd4f758.js.map"
   },
   "entrypoints": [
     "static/css/main.54ac8dea.css",
-    "static/js/main.42cd12c2.js"
+    "static/js/main.9fd4f758.js"
   ]
 }
