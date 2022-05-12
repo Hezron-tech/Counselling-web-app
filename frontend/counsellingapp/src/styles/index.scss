@@ -1,145 +1,145 @@
-:root{
-    --background-color: #EDE6DB;
-    --background-light: #EDE6DB;
-    --shadow-color: #EDE6DB;
-    --primary-color: #000000;
-    --text-color: #000000;
-    --text-light: #575757;
-    --font-size: 20px;
-    --animation-speed: 1;
-}
-@function getAnimationDuration($duration: number){
-    @return calc($duration * var(--animation-speed));
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a{
-    text-decoration: none;
-}
-.btn{
-    border: none;
-    outline: none;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: .5em .75em;
-    border-radius: 12px;
-    font-family: 'Josefin Slab', serif;
-    font-size: 1.5em;
-    letter-spacing: 1px
+// :root{
+//     --background-color: #EDE6DB;
+//     --background-light: #EDE6DB;
+//     --shadow-color: #EDE6DB;
+//     --primary-color: #000000;
+//     --text-color: #000000;
+//     --text-light: #575757;
+//     --font-size: 20px;
+//     --animation-speed: 1;
+// }
+// @function getAnimationDuration($duration: number){
+//     @return calc($duration * var(--animation-speed));
+// }
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+// a{
+//     text-decoration: none;
+// }
+// .btn{
+//     border: none;
+//     outline: none;
+//     background-color: var(--primary-color);
+//     color: #fff;
+//     padding: .5em .75em;
+//     border-radius: 12px;
+//     font-family: 'Josefin Slab', serif;
+//     font-size: 1.5em;
+//     letter-spacing: 1px
 
-}
+// }
 
-.btn2{
-    border: none;
-    outline: none;
-    background-color: transparent;
-    height: 50px;
-    width: 200px;
-    color: var(--text-color);
-    font-size: 1.5em;
-    font-family: 'Josefin Slab', serif
-}
-@import "/src/partials/navbar";
+// .btn2{
+//     border: none;
+//     outline: none;
+//     background-color: transparent;
+//     height: 50px;
+//     width: 200px;
+//     color: var(--text-color);
+//     font-size: 1.5em;
+//     font-family: 'Josefin Slab', serif
+// }
+// @import "/src/partials/navbar";
 
-.main{
-    padding: 2%;
-}
-.section{
-    // padding: 2%;
-    display: flex;
-    align-items: center;
-    .title{
-        color: var(--text-color);
-        margin-bottom: .25em; 
-        font-family: 'Josefin Slab', serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 60px;
-        line-height: 45px;
-    }
-    .info{
-        color: #1d1c1c;
-        font-size: 2em;
-        letter-spacing: 1px;
-        line-height: 1.3em;
-        margin-bottom: 1.15em;
-        font-family: 'Josefin Slab', serif;
-    }
-    .col{
-        width: 100%;
-    }
-}
-.image1{
-    height: 30em;
-}
-.image2{
-    height: 20em;
-    float: right;
-}
-.grid{
-    margin-top: 3em;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-    // width: 723px;
-    height: 100px;
-    // left: 25px;
-    top: 400px;
+// .main{
+//     padding: 2%;
+// }
+// .section{
+//     // padding: 2%;
+//     display: flex;
+//     align-items: center;
+//     .title{
+//         color: var(--text-color);
+//         margin-bottom: .25em; 
+//         font-family: 'Josefin Slab', serif;
+//         font-style: normal;
+//         font-weight: 500;
+//         font-size: 60px;
+//         line-height: 45px;
+//     }
+//     .info{
+//         color: #1d1c1c;
+//         font-size: 2em;
+//         letter-spacing: 1px;
+//         line-height: 1.3em;
+//         margin-bottom: 1.15em;
+//         font-family: 'Josefin Slab', serif;
+//     }
+//     .col{
+//         width: 100%;
+//     }
+// }
+// .image1{
+//     height: 30em;
+// }
+// .image2{
+//     height: 20em;
+//     float: right;
+// }
+// .grid{
+//     margin-top: 3em;
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     grid-gap: 30px;
+//     // width: 723px;
+//     height: 100px;
+//     // left: 25px;
+//     top: 400px;
 
-}
-.container-grid{
-    margin-top: 3em;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
-    // width: 723px;
-    height: 100px;
-    // left: 25px;
-    top: 400px;
-    font-family: 'Josefin Slab', serif;
-    font-size: 1.5em;
-}
-.branding{
-    font-size: 1.5em;
-    background-color: #000000;
-    color: #fff;
-    padding: 80px 0;
-    font-family: 'Josefin Slab', serif;
-}
-.branding h2 {
-    font-weight: 500;
-    font-style: 22px;
-    margin: 10px 0 20px 0;
-}
-.container-grid h2{
-    font-weight: 500;
-    font-style: 22px;
-    margin-bottom: .35em;
-    font-family: sans-serif;
-}
-.container-grid p {
-    font-size: 1.2em;
-}
-.container {
-    padding-inline: 5vw;
+// }
+// .container-grid{
+//     margin-top: 3em;
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-gap: 30px;
+//     // width: 723px;
+//     height: 100px;
+//     // left: 25px;
+//     top: 400px;
+//     font-family: 'Josefin Slab', serif;
+//     font-size: 1.5em;
+// }
+// .branding{
+//     font-size: 1.5em;
+//     background-color: #000000;
+//     color: #fff;
+//     padding: 80px 0;
+//     font-family: 'Josefin Slab', serif;
+// }
+// .branding h2 {
+//     font-weight: 500;
+//     font-style: 22px;
+//     margin: 10px 0 20px 0;
+// }
+// .container-grid h2{
+//     font-weight: 500;
+//     font-style: 22px;
+//     margin-bottom: .35em;
+//     font-family: sans-serif;
+// }
+// .container-grid p {
+//     font-size: 1.2em;
+// }
+// .container {
+//     padding-inline: 5vw;
 
-}
-body{
-    font-size: var(--font-size);
-    background-color: var(--background-color)
-} 
-@import "/src/partials/animations";
-@media screen and (max-width:768px) {
-    .navbar{
-        .navlinks{
-            display: none;   
-        }
-        .sidebar-btn{
-            display: block;
-        }   
-    }
+// }
+// body{
+//     font-size: var(--font-size);
+//     background-color: var(--background-color)
+// } 
+// @import "/src/partials/animations";
+// @media screen and (max-width:768px) {
+//     .navbar{
+//         .navlinks{
+//             display: none;   
+//         }
+//         .sidebar-btn{
+//             display: block;
+//         }   
+//     }
     
-}
+// }

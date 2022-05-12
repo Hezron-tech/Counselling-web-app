@@ -6,6 +6,7 @@ from rest_framework import fields, serializers
 from .models import Counselor, Client, SupportGroup, Session, Medication, MedicationDosage
 
 
+
 class CounselorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Counselor

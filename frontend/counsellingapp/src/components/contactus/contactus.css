@@ -1,0 +1,75 @@
+body{
+    background: #EDE6DB;
+
+}
+
+.container{
+    padding-top: 1.1%;
+    
+}
+
+
+.contact-header {
+    font-size: calc(1.375rem + 1.5vw);
+    font-family: 'Josefin Slab';
+    text-align: center;
+    color: black;
+}
+
+.containerfluid{
+  
+    padding:2%
+  
+}
+
+.col-3 {
+    /* font-size: calc(1.3rem + .6vw); */
+    /* font-family: 'Josefin Slab'; */
+    font-weight: bolder;
+    text-align: left;
+
+}
+
+
+
+.feedback{
+    padding-top: 1.5%;
+}
+
+.form-group{
+    font-family: 'Josefin Slab';
+    color: black;
+}
+
+.col-6{
+    font-family: 'Josefin Slab';
+    font-size: larger;
+    color: black;
+   
+}
+
+
+.btn-custom {
+    font-family: 'Josefin Slab';
+    color: #fff;
+    padding: 14px 34px;
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.5s linear;
+    border: 0;
+}
+.roww{
+    justify-content: space-evenly;
+  
+}
+.rowww{
+ 
+    background-color: black;
+    color: rgb(179, 166, 166);
+    min-height: 24rem;
+    min-width: 23rem;
+    width: 100vh;
+}
